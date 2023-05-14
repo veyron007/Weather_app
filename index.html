@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+    <script th:src="@{/js/jquery-1.8.3.js}"></script>
+    <script th:src="@{/js/jquery.datatables.min.js}"></script>
+    <script th:src="@{//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js}"></script>
+    <script th:src="@{//cdn.datatables.net/plug-ins/1.10.11/sorting/datetime-moment.js}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    --:-- <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    
+                </div>
+                <div class="others" id="current-weather-items">
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class="search-container">
+                <label for="search" id="search">Search Location:</label>
+                <input class="search-input" type="text" id="search-field" onchange=nameSearch()  required >
+                
+
+            </div>
+            <div class="place-container">
+                <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+                <div class="country" id="country">IN</div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+
+            </div>
+
+
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Tue</div>
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+        integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
